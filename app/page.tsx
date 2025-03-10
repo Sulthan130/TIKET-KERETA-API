@@ -50,6 +50,11 @@ const LoginPage = () => {
         if(role === `ADMIN`){
           /** direct ke halaman kereta */
           setTimeout(() => router.replace(`/karyawan/pelanggan`),1000)
+        } else if (role == `CUSTOMER`){
+          /** direct ke halaman jadwal */
+          setTimeout(
+            () => router.replace(`/pelanggan/jadwal`),1000
+          )
         }
       }
     } catch (error) {
