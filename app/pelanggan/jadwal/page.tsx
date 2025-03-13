@@ -26,10 +26,10 @@ const getJadwal = async (
 }
 
 type Props = {
-    searchParams: {
+    searchParams: Promise<{
         departured_location?: string
         arrived_location?: string
-    }
+    }>
 }
 
 const JadwalPage = async (myProp: Props) => {

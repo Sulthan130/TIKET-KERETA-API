@@ -34,17 +34,17 @@ const getDetailKereta = async (
 }
 
 type props = {
-    params: {
+    params: Promise<{
         id_kereta: string
         // sesuai dengan nama foldernya
-    }
+    }>
 }
 
 const DetailKeretaPage = async (
     myprop: props
 ) => {
     // get value of selected "id_kereta"
-    const id_kereta = myprop.params.id_kereta
+    const id_kereta = (await myprop.params).id_kereta
     /** get data from backend */
     const datakereta =
         await getDetailKereta(id_kereta)

@@ -3,6 +3,7 @@ import { getServerCookie } from "@/helper/server-cookie";
 import { User } from "../types";
 import axiosInstance from "@/helper/api";
 import Admin from "./Admin";
+import AddAdmin from "./addAdmin";
 
 const getPelanggan = async (): Promise<User[]> => {
     try {
@@ -35,6 +36,7 @@ const PelangganPage = async() => {
             </span>
             {/* <AddPelanggan></AddPelanggan> */}
             <div className="my-3">
+                <AddAdmin />
                 {/* mapping data kereta */}
                 {
                     dataKereta.map((Admins, index) => (
