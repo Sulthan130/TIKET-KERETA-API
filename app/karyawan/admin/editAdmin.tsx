@@ -93,7 +93,7 @@ const EditAdmin = (myProp: props) => {
                     {/*  modal header */}
                     <div className="w-full p-3 rounded-t-lg">
                         <h1 className="font-semibold text-lg">
-                            Edit Data Pelanggan
+                            Edit Data Admin
                         </h1>
                         <span className="text-sm text-slate-500">
                             Pastikan data yang diisi sudah benar
