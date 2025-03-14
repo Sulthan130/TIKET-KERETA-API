@@ -83,7 +83,7 @@ const DropSchedule = (myProp: props) => {
                     {/*  modal header */}
                     <div className="w-full p-3 rounded-t-lg">
                         <h1 className="font-semibold text-lg">
-                            Edit Data Kereta
+                            Hapus Jadwal Kereta
                         </h1>
                         <span className="text-sm text-slate-500">
                             Pastikan data yang diisi sudah benar
@@ -92,7 +92,7 @@ const DropSchedule = (myProp: props) => {
 
                     {/*  modal body */}
                     <div className="w-full p-3">
-                        Apakah anda yakin ingin menghapus data ini?
+                        Apakah anda yakin ingin menghapus data jadwal kereta ini?
                     </div>
 
                     {/*  modal footer */}
