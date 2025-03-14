@@ -1,4 +1,5 @@
 import { GerbongType } from "../../types"
+import AddSeat from "./addSeat"
 import DropGerbong from "./dropGerbong"
 import Editgerbong from "./editGerbong"
 import Seat from "./Seat"
@@ -18,20 +19,26 @@ const Gerbong = (myProp: props) => {
                 Jumlah Kursi: {myProp.item.seat_count}
 
                 <div className="w-full my-2">
-                    {
-                        myProp.item.seats.length == 0 ?
-                        <div className="bg-sky-200 p-5 rounded-md">
-                            Gerbong ini belum mempunyai kursi
-                        </div> :
-                        <div className="flex flex-wrap gap-3">
-                            {
-                                myProp.item.seats.map((seat, index) => (
-                                    <Seat key={`keySeat-${index}`}
-                                    item={seat} />
-                                ))
-                            }
-                        </div>
-                    }
+                {
+            myProp.item.seats.length == 0? 
+            <div className="flex flex-col space-y-5">
+               <div className="bg-sky-200 p-5 rounded-md">
+              Gerbong ini belum mempunyai kursi
+            </div>
+            <AddSeat wagonId={myProp.item.id} id={myProp.item.id}/>
+            </div>
+            :
+            <div className="flex flex-wrap gap-3">
+               <AddSeat wagonId={myProp.item.id} id={myProp.item.id}/>
+              {
+                myProp.item.seats.map((seat, index) => (
+                  <Seat key={`seat-${index}`}
+                  item={seat}
+                  />
+                ))
+              }
+            </div>
+          }
                 </div>
             </div>
             <div className="p-3 flex gap-2">
